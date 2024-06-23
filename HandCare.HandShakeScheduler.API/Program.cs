@@ -1,3 +1,5 @@
+using HandCare.Data.DbContext;
+using Microsoft.EntityFrameworkCore;
 
 namespace HandCare.HandShakeScheduler.API
 {
@@ -11,6 +13,11 @@ namespace HandCare.HandShakeScheduler.API
 
             builder.Services.AddControllers();
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
+
+            // pass connection string to dbcontext
+            builder.Services.AddDbContext<HandCareContext>(options =>
+                options.UseSqlServer("name=ConnectionStrings:HandCareDb"));
+            
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
 
