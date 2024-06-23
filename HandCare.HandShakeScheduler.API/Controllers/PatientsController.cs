@@ -14,7 +14,7 @@ namespace HandCare.HandShakeScheduler.API
 
             var patient = new Patient()
             {
-                FirstName = "Hack",
+                FirstName = "Hacksd",
                 LastName = "Hackson",
                 PatientId = patientId,
                 DateOfBirth = DateTime.Now
