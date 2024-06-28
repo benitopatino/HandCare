@@ -1,4 +1,4 @@
-using HandCare.Data.DbContext;
+using HandCare.Data;
 using Microsoft.EntityFrameworkCore;
 
 namespace HandCare.HandShakeScheduler.API

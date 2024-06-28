@@ -1,7 +1,7 @@
 using System.Data.Common;
 using HandCare.Domain;
 using Microsoft.EntityFrameworkCore;
-namespace HandCare.Data.DbContext;
+namespace HandCare.Data;
 
 public class HandCareContext : Microsoft.EntityFrameworkCore.DbContext
 {
