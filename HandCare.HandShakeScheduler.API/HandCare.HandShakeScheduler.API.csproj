@@ -17,7 +17,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\HandCare.Data\HandCare.Data.csproj" />
-    <ProjectReference Include="..\HandCare.Domain\HandCare.Domain.csproj" />
+    <ProjectReference Include="..\HandCare.Core\HandCare.Core.csproj" />
   </ItemGroup>
 
 </Project>
