@@ -1,6 +1,6 @@
 using System.Linq.Expressions;
 
-namespace HandCare.Domain.Repositories;
+namespace HandCare.Core.Repositories;
 
 public interface IRepository<TEntity, in TKey> where TEntity : class
 {

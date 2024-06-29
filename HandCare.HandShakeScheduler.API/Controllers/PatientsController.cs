@@ -1,5 +1,5 @@
-﻿using HandCare.Domain;
-using Microsoft.AspNetCore.Http;
+﻿using HandCare.Core;
+using HandCare.Core.Domain;
 using Microsoft.AspNetCore.Mvc;
 
 namespace HandCare.HandShakeScheduler.API
@@ -8,20 +8,22 @@ namespace HandCare.HandShakeScheduler.API
     [ApiController]
     public class PatientsController : ControllerBase
     {
-        [HttpGet("{patientId}")]
-        public async Task<ActionResult<Patient>> GetPatient(string patientId)
+        private readonly IUnitOfWork _workService;
+
+        public PatientsController(IUnitOfWork workService)
         {
+            _workService = workService;
+        }
+        
+        
+        [HttpPost]
+        public ActionResult<Patient> Patient(Patient patient)
+        {
+            _workService.Patients.Add(patient);
+            _workService.Complete();
 
-            var patient = new Patient()
-            {
-                FirstName = "Hacksd",
-                LastName = "Hackson",
-                PatientId = patientId,
-                DateOfBirth = DateTime.Now
-            };
-
-            return patient == null ? NotFound() : Ok(patient);
-
+            //    return CreatedAtAction("PostTodoItem", new { id = todoItem.Id }, todoItem);
+            return  CreatedAtAction(nameof(Patient), new { id = patient.PatientId }, patient);
         }
     }
 }

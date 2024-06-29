@@ -1,5 +1,5 @@
 using System.Data.Common;
-using HandCare.Domain;
+using HandCare.Core.Domain;
 using Microsoft.EntityFrameworkCore;
 namespace HandCare.Data;
 
