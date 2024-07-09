@@ -43,7 +43,7 @@ namespace HandCare.Core.Domain
         public string? State { get; set; }
         
         [StringLength(50)]
-        [RegularExpression("^\\d{5}(?:-\\d{4})?$\n", ErrorMessage = "Please enter a valid zipcode")]
+        [RegularExpression("^\\d{5}(?:-\\d{4})?$", ErrorMessage = "Please enter a valid zipcode")]
         public string? ZipCode { get; set; }
     }
     
