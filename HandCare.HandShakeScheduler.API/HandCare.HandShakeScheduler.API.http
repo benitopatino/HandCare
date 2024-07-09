@@ -1,6 +1,6 @@
 @HandCare.HandShakeScheduler.API_HostAddress = http://localhost:5159
 
-GET {{HandCare.HandShakeScheduler.API_HostAddress}}/weatherforecast/
+GET {{HandCare.HandShakeScheduler.API_HostAddress}}/api/
 Accept: application/json
 
 ###
