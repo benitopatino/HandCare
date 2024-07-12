@@ -9,11 +9,13 @@ public class UnitOfWork : IUnitOfWork
     private readonly HandCareContext _context;
     
     public IPatientRepository Patients { get; }
+    public IOfficeRepository Offices { get; set; }
 
     public UnitOfWork(HandCareContext context)
     {
         _context = context;
         Patients = new PatientRepository(_context);
+        Offices = new OfficeRepository(_context);
     }
 
     public int Complete()
