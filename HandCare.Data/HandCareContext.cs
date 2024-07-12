@@ -6,6 +6,7 @@ namespace HandCare.Data;
 public class HandCareContext : Microsoft.EntityFrameworkCore.DbContext
 {
     public DbSet<Patient> Patients { get; set; }
+    public DbSet<Office> Offices { get; set; }
     
     //
     // protected override void OnConfiguring(DbContextOptionsBuilder options)
