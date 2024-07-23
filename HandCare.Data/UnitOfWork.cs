@@ -9,8 +9,8 @@ public class UnitOfWork : IUnitOfWork
     private readonly HandCareContext _context;
     
     public IPatientRepository Patients { get; }
-    public IOfficeRepository Offices { get; set; }
-
+    public IOfficeRepository Offices { get;}
+    
     public UnitOfWork(HandCareContext context)
     {
         _context = context;
