@@ -12,6 +12,9 @@ public class Office
     [StringLength(50)]
     public string? Address { get; set; }
     
+    [StringLength(50)]
+    public string? Name { get; set; }
+    
     [StringLength(450)]
     public string? City { get; set; }
     
