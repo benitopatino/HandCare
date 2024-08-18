@@ -63,6 +63,7 @@ namespace HandCare.HandShakeScheduler.API.Controllers.Admin
                     existingOffice.State = updatedOffice.State;
                     existingOffice.Closed = updatedOffice.Closed;
                     existingOffice.Phone = updatedOffice.Phone;
+                    existingOffice.Name = updatedOffice.Name;
                 }
 
                 _workService.Complete();

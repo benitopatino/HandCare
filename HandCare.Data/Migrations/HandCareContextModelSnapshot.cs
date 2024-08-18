@@ -77,6 +77,10 @@ namespace HandCare.Data.Migrations
                     b.Property<bool>("Closed")
                         .HasColumnType("bit");
 
+                    b.Property<string>("Name")
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
+
                     b.Property<string>("Phone")
                         .HasMaxLength(50)
                         .HasColumnType("nvarchar(50)");
