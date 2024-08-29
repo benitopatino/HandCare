@@ -10,12 +10,14 @@ public class UnitOfWork : IUnitOfWork
     
     public IPatientRepository Patients { get; }
     public IOfficeRepository Offices { get;}
+    public IAppointmentRepository Appointments { get; }
     
     public UnitOfWork(HandCareContext context)
     {
         _context = context;
         Patients = new PatientRepository(_context);
         Offices = new OfficeRepository(_context);
+        Appointments = new AppointmentRepository(_context);
     }
 
     public int Complete()
