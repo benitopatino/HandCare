@@ -1,5 +1,6 @@
 using HandCare.Core;
 using HandCare.Data;
+using HandCare.HandShakeScheduler.API.Mapper;
 using Microsoft.EntityFrameworkCore;
 
 namespace HandCare.HandShakeScheduler.API
@@ -12,6 +13,8 @@ namespace HandCare.HandShakeScheduler.API
 
             // Add services to the container.
             builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
+
+            builder.Services.AddAutoMapper(typeof(ProfileMapper));
             builder.Services.AddControllers();
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 

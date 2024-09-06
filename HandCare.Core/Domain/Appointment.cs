@@ -19,6 +19,7 @@ public class Appointment
 
 	public Guid PatientId { get; set; }
 	
+	[DatabaseGenerated(DatabaseGeneratedOption.Computed)]
 	public DateTime CreatedDate { get; set; }
 
 	public DateTime Time { get; set; }
